@@ -16,7 +16,7 @@ dev-lang/go ~amd64
 dev-libs/boost ~amd64
 dev-util/boost-build ~amd64
 media-sound/google-musicmanager ~amd64
-www-plugins/chrome-binary-plugins ~amd64
+www-client/google-chrome ~amd64
 www-plugins/google-talkplugin ~amd64
 www-servers/tornado ~amd64
 x11-libs/cairo ~amd64

@@ -1,4 +1,4 @@
-www-plugins/chrome-binary-plugins google-chrome
+www-client/google-chrome google-chrome
 www-plugins/adobe-flash AdobeFlash-11.x
 www-plugins/google-talkplugin Google-TOS
 media-sound/google-musicmanager Google-TOS

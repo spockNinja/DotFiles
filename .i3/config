@@ -113,7 +113,7 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
 
 # Application shortcuts
-bindsym $mod+C exec chromium
+bindsym $mod+C exec google-chrome
 bindsym $mod+G exec gvim
 bindsym $mod+X exec exaile
 bindsym $mod+P exec pcmanfm
