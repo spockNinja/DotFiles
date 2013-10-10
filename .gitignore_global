@@ -3,3 +3,5 @@
 .ropeproject
 # Python virtualenv
 .env
+.venv
+env

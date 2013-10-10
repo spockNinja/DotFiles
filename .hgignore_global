@@ -2,4 +2,7 @@ syntax: glob
 
 *~
 .DS_Store
+# Python virtualenv
 .env
+.venv
+env
