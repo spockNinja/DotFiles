@@ -66,8 +66,6 @@ antigen-apply
 alias ls='ls --color=auto'
 alias gg='git grep -n'
 compdef _git gg=git-grep
-alias gpd='git push --delete'
-compdef _git gpd=git-push
 alias gws='git iws'
 compdef _git gws=git-iws
 alias gwsc='git iws cut'
@@ -76,6 +74,13 @@ alias gwsu='git iws push'
 compdef _git gwsu=git-iws-push
 alias gwsp='git iws pullrequest'
 compdef _git gwsp=git-iws-pullrequest
+
+# Delete Local & Remote Git Branches from origin
+function gbd() {
+    git branch -D $1
+    git push --delete origin $1
+}
+compdef _git gbd=git-branch
 
 # Activate virtualenv bottles named .venv automatically upon cd
 function chpwd() {
