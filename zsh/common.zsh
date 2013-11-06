@@ -82,6 +82,12 @@ function gbd() {
 }
 compdef _git gbd=git-branch
 
+# Set tracking branch
+function gbu() {
+    git branch -u $1
+}
+compdef _git gbu=git-push
+
 # Activate virtualenv bottles named .venv automatically upon cd
 function chpwd() {
     if [ -d .venv ]; then
