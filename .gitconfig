@@ -17,7 +17,7 @@
     conflictstyle = diff3
 
 [mergetool "fugitive"]
-    cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+    cmd = vim -f -c \"GitGutterDisable\" -c \"Gdiff\" \"$MERGED\"
 
 [alias]
     ci = commit
