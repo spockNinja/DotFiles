@@ -74,6 +74,8 @@ alias gwsu='git iws push'
 compdef _git gwsu=git-iws-push
 alias gwsp='git iws pullrequest'
 compdef _git gwsp=git-iws-pullrequest
+alias gbu='git branch -u'
+compdef _git gbu=git-push
 
 # Delete Local & Remote Git Branches from origin
 function gbd() {
@@ -81,12 +83,6 @@ function gbd() {
     git push --delete origin $1
 }
 compdef _git gbd=git-branch
-
-# Set tracking branch
-function gbu() {
-    git branch -u $1
-}
-compdef _git gbu=git-push
 
 # Activate virtualenv bottles named .venv automatically upon cd
 function chpwd() {
