@@ -76,6 +76,7 @@ alias gwsp='git iws pullrequest'
 compdef _git gwsp=git-iws-pullrequest
 alias gbu='git branch -u'
 compdef _git gbu=git-push
+alias gginit='for b in `gba | grep origin | grep -v HEAD | cut -d"/" -f3`; gco $b && gbu upstream/master;'
 
 # Delete Local & Remote Git Branches from origin
 function gbd() {
