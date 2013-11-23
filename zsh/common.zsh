@@ -57,9 +57,6 @@ done
 # Turn on syntax highlighting for shell
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
-# Pretty Colors
-antigen-theme dpoggi
-
 antigen-apply
 
 # Aliases (at the end to overwrite any antigen aliases)
@@ -85,6 +82,8 @@ alias gbu='git branch -u'
 compdef _git gbu=git-push
 alias ggforce='ggpush -f --no-verify'
 compdef ggforce=git
+alias gpd='git push --delete'
+compdef _git gpd=git-push
 alias gginit='for b in `gba | grep origin | grep -v HEAD | cut -d"/" -f3`; gco $b && gbu upstream/master;'
 alias nosecov='nosetests --with-cover --cover-html --cover-html-dir=htmlcov'
 compdef _nosetests nosecov=nosetests
@@ -132,3 +131,14 @@ function find_commit_by_string() {
     git log -S "${(q)1}" --source --all
 }
 
+# my prompt preference
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}("
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}○%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}⚡%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[white]%})%{$reset_color%}"
+
+PROMPT='%{$fg[cyan]%}%~\
+$(git_prompt_info) \
+%{$fg[red]%}%(!.#.»)%{$reset_color%} '
+
+RPROMPT='%{$fg[cyan]%}%D|%T%{$reset_color%}'
