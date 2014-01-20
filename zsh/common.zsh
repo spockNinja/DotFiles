@@ -91,3 +91,10 @@ function chpwd() {
         . .venv/bin/activate
     fi
 }
+
+# Serve HTML Directory at specified port (8000 is the default)
+function serve() {
+    pushd $1
+    python2 -m SimpleHTTPServer $2
+    popd
+}
