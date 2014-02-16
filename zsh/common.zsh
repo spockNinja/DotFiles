@@ -76,6 +76,8 @@ alias gwsp='git iws pullrequest'
 compdef _git gwsp=git-iws-pullrequest
 alias gbu='git branch -u'
 compdef _git gbu=git-push
+alias ggforce='ggpush -f --no-verify'
+compdef ggforce=git
 alias gginit='for b in `gba | grep origin | grep -v HEAD | cut -d"/" -f3`; gco $b && gbu upstream/master;'
 alias nosecov='nosetests --with-cover --cover-html --cover-html-dir=htmlcov'
 compdef _nosetests nosecov=nosetests
