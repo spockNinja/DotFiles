@@ -64,6 +64,11 @@ antigen-apply
 
 # Aliases (at the end to overwrite any antigen aliases)
 alias ls='ls --color=auto'
+alias t='todo.sh'
+alias ta='todo.sh add'
+alias td='todo.sh do'
+alias te='todo.sh edit'
+alias tls='todo.sh list'
 alias gg='git grep -n'
 compdef _git gg=git-grep
 alias gws='git iws'
