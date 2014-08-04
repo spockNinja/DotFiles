@@ -110,3 +110,16 @@ function serve() {
     python2 -m SimpleHTTPServer $2
     popd
 }
+
+# Functions for finding commits and PRs
+
+# This function will find the PR that included a particular commit by hash
+function pull_request_from_commit {
+    git log --merges --ancestry-path --oneline $1..master | grep 'pull request' | tail -n1 | awk '{print $5}' | cut -c2- | xargs -I % open https://github.com/IntuitiveWebSolutions/BriteCore/pull/%
+}
+
+# This function will find which commit introduced a particular string to the repository.
+function find_commit_by_string() {
+    git log -S "${(q)1}" --source --all
+}
+
