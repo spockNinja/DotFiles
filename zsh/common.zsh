@@ -63,7 +63,6 @@ antigen-theme dpoggi
 antigen-apply
 
 # Aliases (at the end to overwrite any antigen aliases)
-alias ls='ls --color=auto'
 alias t='todo.sh'
 alias ta='todo.sh add'
 alias tap='todo.sh adda'
@@ -96,6 +95,16 @@ function gbd() {
     git push --delete origin $1
 }
 compdef _git gbd=git-branch
+
+# Find the commit that introduced a given string or regex
+function find_commit_by_string() {
+    git log -S "$1" --source --all
+}
+
+# Find the pull request for a given commit hash
+function pull_request_from_commit() {
+    git log --merges --ancestry-path --oneline $1..master | grep 'pull request' | tail -n1 | awk '{print $5}' | cut -c2- | xargs -I % open https://github.com/IntuitiveWebSolutions/BriteCore/pull/%
+}
 
 # Activate virtualenv bottles named .venv automatically upon cd
 function chpwd() {
