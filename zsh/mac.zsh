@@ -7,6 +7,8 @@ alias vud='vagrant up dev'
 alias vhd='vagrant halt dev'
 alias vsd='vagrant ssh dev'
 alias vpd='vagrant provision dev'
+# Better ls alias for Mac
+alias ls='ls -GpFh'
 
 PLUGINS=('vagrant' 'brew')
 source "$ZSH_DIR/common.zsh"
