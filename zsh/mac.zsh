@@ -31,3 +31,18 @@ alias ls='ls -GpFh'
 PLUGINS=('vagrant' 'brew')
 source "$ZSH_DIR/common.zsh"
 source "/sw/bin/init.sh"
+
+# my prompt preference
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}("
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}○%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}⚡%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[white]%})%{$reset_color%}"
+
+PROMPT='%{$fg[cyan]%}%~\
+$(git_prompt_info) \
+%{$fg[red]%}%(!.#.»)%{$reset_color%} '
+
+RPROMPT='%{$fg[cyan]%}%D|%T%{$reset_color%}'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
