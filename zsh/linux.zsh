@@ -8,6 +8,6 @@ alias hammertime='sudo supervisorctl stop all && sudo service rabbitmq-server st
 
 source "$ZSH_DIR/common.zsh"
 
-PROMPT='%{$fg[cyan]%}%~'
+PROMPT='%{$fg[cyan]%}%~ '
 
 RPROMPT='%{$fg[cyan]%}%D|%T%{$reset_color%}'
