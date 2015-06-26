@@ -1,0 +1,13 @@
+atom-compile-less@0.12.0
+atom-ctags@4.1.4
+autocomplete-plus-python-jedi@0.3.6
+language-mako@0.4.0
+linter@1.0.4
+linter-flake8@1.4.2
+linter-jshint@0.1.6
+linter-scspell@1.2.0
+linter-shellcheck@0.0.8
+project-manager@1.15.10
+run-command@0.2.0
+symbol-gen@1.0.0
+
