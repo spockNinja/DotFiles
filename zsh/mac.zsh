@@ -30,7 +30,6 @@ alias ls='ls -GpFh'
 
 PLUGINS=('vagrant' 'brew')
 source "$ZSH_DIR/common.zsh"
-source "/sw/bin/init.sh"
 
 # my prompt preference
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}("
