@@ -1,0 +1,93 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+'.source.js':
+    'BC JS Model':
+        'prefix': 'model'
+        'body': """
+        bc.models.${1:"ModelName"} = function() {
+            var self = this;
+
+            self.$2
+        }
+        bc.models.${1:"ModelName"}.prototype = new bc.models.Model();
+        """
+
+    'JS for loop':
+        'prefix': 'bfor'
+        'body': """
+        for (var ${1:i} = 0; ${1:i} < ${2:array}.length; ${1:i}++) {
+            ${2:array}[${1:i}]$3;
+        }
+        """
+
+    'JS for in':
+        'prefix': 'bforin'
+        'body': """
+        for (${1:variable} in ${2:object}) {
+            if (${2:object}.hasOwnProperty(${1:variable})) {
+                $3
+            }
+        }
+        """
+
+    'Breakpoint':
+        'prefix': 'b'
+        'body': 'debugger;'
+
+'.source.python':
+    'Doc String':
+        'prefix': 'doc'
+        'body': '"""$1"""'
+
+    'Breakpoint':
+        'prefix': 'b'
+        'body': 'import pudb; pudb.set_trace()'
+
+    'Postfix Script':
+        'prefix': 'postfix'
+        'body': """
+        #!/usr/bin/env python2.7
+        \"""
+        @author: $1
+        @contact: $2
+        @organization: IWS
+
+        Functionality
+        =============
+        $3
+        \"""
+        import locale
+        import os
+        import sys
+
+        sys.path.append(os.path.join(os.path.dirname(__file__), os.pardir))
+        sys.path.append(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'lib'))
+
+        from postfix import run_sql_statements
+
+
+        def main():
+        \"""Postfix entry point.\"""
+
+            run_sql_statements([
+                \"""$4\"""
+            ])
+
+        if __name__ == '__main__':
+            # set locale, so all locale functions can be used
+            locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+            main()
+        """

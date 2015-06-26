@@ -1,0 +1,65 @@
+"*":
+  setTabLength: 4
+  editor:
+    fontSize: 15
+    tabLength: 4
+    invisibles: {}
+  core:
+    ignoredNames: [
+      "*.pyc"
+    ]
+    disabledPackages: [
+      "the-closer"
+      "slack-atom"
+      "slack-atom"
+      "atom-ctags"
+    ]
+    themes: [
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  "exception-reporting":
+    userId: "edd965dc-dead-76f3-b529-24b3bf5663d1"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "7cc5cc259955b627aa1befc9d32bfbb8801365a1"
+  "atom-lint":
+    showViolationMetadata: false
+    flake8:
+      args: [
+        "--ignore"
+        "E126"
+        "E127"
+        "E128"
+      ]
+  "atom-compile-less":
+    compressCss: false
+    compileMainFile: false
+  "tree-view":
+    hideIgnoredNames: true
+  linter:
+    lintOnChange: false
+    lintOnEditorFocus: false
+    showHighlighting: true
+    lintOnFly: false
+  "linter-flake8":
+    executableDir: "/usr/local/bin/flake8"
+  "linter-jshint":
+    jshintExecutablePath: "/usr/local/bin/jshint"
+  "bracket-matcher":
+    autocompleteSmartQuotes: false
+  "slack-token": "xoxp-4024304260-4027182194-4025746561-f5b4f2"
+  term2:
+    colors: {}
+    cursorBlink: false
+  "linter-scspell":
+    overrideDictionary: "/Users/jacobfoster/dictionary.txt"
+  "run-command": {}
+  "atom-ctags":
+    cmdArgs: "--exclude=/Users/jacobfoster/Sites/britecore/uploads --exclude=/Users/jacobfoster/Sites/britecore/build --exclude=/Users/jacobfoster/Sites/britecore/log --exclude=/Users/jacobfoster/Sites/britecore/db --exclude=/Users/jacobfoster/Sites/britecore/pdfs --exclude=/Users/jacobfoster/Sites/britecore/static/img --exclude=*.swf --exclude=*.css --exclude=*.less --exclude=/Users/jacobfoster/Sites/britecore/search_index --exclude=*.pyc"
+    buildTimeout: 20000
+  "autocomplete-plus":
+    confirmCompletion: "tab"
+    includeCompletionsFromAllBuffers: false
+    enableBuiltinProvider: false
