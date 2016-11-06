@@ -9,17 +9,14 @@
       "*.pyc"
     ]
     disabledPackages: [
-      "the-closer"
-      "slack-atom"
-      "slack-atom"
-      "atom-ctags"
+      "symbols-view"
     ]
     themes: [
       "atom-dark-ui"
       "base16-tomorrow-dark-theme"
     ]
   "exception-reporting":
-    userId: "edd965dc-dead-76f3-b529-24b3bf5663d1"
+    userId: "281fda35-4bcf-68fa-8c47-cd6379214aaf"
   welcome:
     showOnStartup: false
   metrics:

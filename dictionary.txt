@@ -331,6 +331,7 @@ getwriter
 hasattr
 hashlib
 hexdigest
+httpretty
 isabs
 isdir
 isfile
@@ -391,6 +392,7 @@ termios
 textwrap
 traceback
 unichr
+unittest
 unsetenv
 urandom
 waitpid
@@ -45470,6 +45472,7 @@ linseeds
 lint
 lintel
 lintels
+linter
 lintier
 linties
 lintiest
@@ -70093,6 +70096,7 @@ scrutinizing
 scrutiny
 scrutinys
 scsi
+scspell
 scuba
 scubaed
 scubaing

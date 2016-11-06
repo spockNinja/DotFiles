@@ -1,3 +1,4 @@
 *.amz
 *.log
 *.htpasswd
+*.htmlhintrc

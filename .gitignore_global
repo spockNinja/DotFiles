@@ -1,6 +1,7 @@
 *~
 .DS_Store
 .ropeproject
+.htmlhintrc
 # Python virtualenv
 .env
 .venv

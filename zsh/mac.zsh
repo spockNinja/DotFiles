@@ -14,17 +14,6 @@ alias cask_list="brew cask list"
 # Set up haste to use our BriteCore server
 alias work_haste='HASTE_SERVER=http://hastebin.britecorepro.com haste'
 
-# Vagrant Aliases
-alias vud='cd ~/BC-Up && vagrant up dev'
-alias vhd='cd ~/BC-Up && vagrant halt dev'
-alias vsd='cd ~/BC-Up && vagrant ssh dev'
-alias vpd='cd ~/BC-Up && vagrant provision dev'
-
-alias vui='cd ~/BriteCore-Up && vagrant up iwsquotes'
-alias vhi='cd ~/BriteCore-Up && vagrant halt iwsquotes'
-alias vsi='cd ~/BriteCore-Up && vagrant ssh iwsquotes'
-alias vagrantrun="ssh -i ~/.vagrant.d/insecure_private_key -c none -YC -p2222 vagrant@localhost"
-
 # Better ls alias for Mac
 alias ls='ls -GpFh'
 
@@ -42,6 +31,3 @@ $(git_prompt_info) \
 %{$fg[red]%}%(!.#.»)%{$reset_color%} '
 
 RPROMPT='%{$fg[cyan]%}%D|%T%{$reset_color%}'
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
